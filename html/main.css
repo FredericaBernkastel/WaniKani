@@ -1,0 +1,320 @@
+.card {
+ font-family: "verdana", "Hiragino Kaku Gothic Pro W3", sans-serif;
+ font-size: 20px;
+ text-align: center;
+ color: black;
+ background-color: white;
+}
+
+p { padding: 0; margin: 0; }
+
+@font-face {
+  font-family: "Hiragino Kaku Gothic Pro W3";
+  src: url("_hirakakyprow3.otf");
+}
+
+.kanji {
+ font-family: "Hiragino Kaku Gothic Pro W3", sans-serif;
+ font-size:150px;
+ color: white;
+ background-color:#0a9ce6;
+ line-height: 1.2;
+}
+
+.kanji.red { background-color:#e20096; }
+.kanji.purple { background-color: #a900fd; }
+.kanji.vocab { font-size: 15vw; line-height: 180px; }
+
+.text {
+  font-size: 14px;
+  line-height: 1;
+  font-style: "italics";
+}
+.text.mean, .text.read { line-height: 1.4; }
+.text.context { line-height: 1.6; }
+  .text .hiragana { font-size: 16px; }
+
+.mean { margin-bottom: 0.5em; }
+.small { font-size: 12px; line-height: 1; }
+hr { border: none; border-bottom: solid 1px #aaa; }
+
+.radicon {
+ color:white;
+ font-size:150px;
+}
+
+.kanji-highlight {
+  background-color: #e05eb5;
+}
+
+.reading-highlight {
+  background-color: #999;
+}
+
+.radical-highlight {
+  background-color: #6cbde6;
+}
+
+.vocabulary-highlight {
+  background-color: #a05ef7;
+}
+
+.kanji-highlight, .reading-highlight, .radical-highlight, .vocabulary-highlight {
+  color: white;
+  padding: 2px;
+}
+
+#fixed-bottom {
+  position: fixed;
+  bottom: 0px;
+  float: left;
+}
+
+/*
+  Icon Font: WakaFont
+*/
+
+@font-face {
+  font-family: "WakaFont";
+  src: url("_WakaFont.eot");
+  src: url("_WakaFont.eot?#iefix") format("embedded-opentype"),
+       url("_WakaFont.woff") format("woff"),
+       url("_WakaFont.ttf") format("truetype"),
+       url("_WakaFont.svg#WakaFont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "WakaFont";
+    src: url("_WakaFont.svg#WakaFont") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.radical-animal:before,
+.radical-arrows:before,
+.radical-bar:before,
+.radical-bear:before,
+.radical-beggar:before,
+.radical-black-hole:before,
+.radical-blackjack:before,
+.radical-boob:before,
+.radical-bookshelf:before,
+.radical-butcher:before,
+.radical-cactus:before,
+.radical-cat-pirate:before,
+.radical-chester:before,
+.radical-chinese:before,
+.radical-circus:before,
+.radical-cleat:before,
+.radical-cloak:before,
+.radical-clown:before,
+.radical-coffin:before,
+.radical-comb:before,
+.radical-corn:before,
+.radical-cow-god:before,
+.radical-creeper:before,
+.radical-death-star:before,
+.radical-egg:before,
+.radical-explosion:before,
+.radical-fish-stick:before,
+.radical-fish-tail:before,
+.radical-flowers:before,
+.radical-football:before,
+.radical-four:before,
+.radical-gambler:before,
+.radical-geoduck:before,
+.radical-grass:before,
+.radical-greenhouse:before,
+.radical-gun:before,
+.radical-hat:before,
+.radical-hercules:before,
+.radical-hick:before,
+.radical-hills:before,
+.radical-horns:before,
+.radical-key:before,
+.radical-kick:before,
+.radical-lantern:before,
+.radical-leaf:before,
+.radical-mohawk:before,
+.radical-morning:before,
+.radical-mustache:before,
+.radical-nailbat:before,
+.radical-ox:before,
+.radical-pi:before,
+.radical-poem:before,
+.radical-pool:before,
+.radical-pope:before,
+.radical-potato:before,
+.radical-propaganda:before,
+.radical-psychopath:before,
+.radical-ribs:before,
+.radical-rocket:before,
+.radical-roof:before,
+.radical-sauron:before,
+.radical-saw:before,
+.radical-shark:before,
+.radical-sick:before,
+.radical-signpost:before,
+.radical-slice:before,
+.radical-slinky:before,
+.radical-sock:before,
+.radical-spikes:before,
+.radical-splinter:before,
+.radical-squid:before,
+.radical-stick:before,
+.radical-superman:before,
+.radical-tofu:before,
+.radical-tombstone:before,
+.radical-train:before,
+.radical-triceratops:before,
+.radical-trident:before,
+.radical-tsunami:before,
+.radical-umbrella:before,
+.radical-viking:before,
+.radical-water-slide:before,
+.radical-womb:before,
+.radical-worm:before,
+.radical-zombie:before {
+  display: inline-block;
+  font-family: "WakaFont";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.radical-animal:before { content: "\f100"; }
+.radical-arrows:before { content: "\f101"; }
+.radical-bar:before { content: "\f102"; }
+.radical-bear:before { content: "\f103"; }
+.radical-beggar:before { content: "\f104"; }
+.radical-black-hole:before { content: "\f105"; }
+.radical-blackjack:before { content: "\f106"; }
+.radical-boob:before { content: "\f107"; }
+.radical-bookshelf:before { content: "\f108"; }
+.radical-butcher:before { content: "\f109"; }
+.radical-cactus:before { content: "\f10a"; }
+.radical-cat-pirate:before { content: "\f10b"; }
+.radical-chester:before { content: "\f10c"; }
+.radical-chinese:before { content: "\f10d"; }
+.radical-circus:before { content: "\f10e"; }
+.radical-cleat:before { content: "\f10f"; }
+.radical-cloak:before { content: "\f110"; }
+.radical-clown:before { content: "\f111"; }
+.radical-coffin:before { content: "\f112"; }
+.radical-comb:before { content: "\f113"; }
+.radical-corn:before { content: "\f114"; }
+.radical-cow-god:before { content: "\f115"; }
+.radical-creeper:before { content: "\f116"; }
+.radical-death-star:before { content: "\f117"; }
+.radical-egg:before { content: "\f118"; }
+.radical-explosion:before { content: "\f119"; }
+.radical-fish-stick:before { content: "\f11a"; }
+.radical-fish-tail:before { content: "\f11b"; }
+.radical-flowers:before { content: "\f11c"; }
+.radical-football:before { content: "\f11d"; }
+.radical-four:before { content: "\f11e"; }
+.radical-gambler:before { content: "\f11f"; }
+.radical-geoduck:before { content: "\f120"; }
+.radical-grass:before { content: "\f121"; }
+.radical-greenhouse:before { content: "\f122"; }
+.radical-gun:before { content: "\f123"; }
+.radical-hat:before { content: "\f124"; }
+.radical-hercules:before { content: "\f125"; }
+.radical-hick:before { content: "\f126"; }
+.radical-hills:before { content: "\f127"; }
+.radical-horns:before { content: "\f128"; }
+.radical-key:before { content: "\f129"; }
+.radical-kick:before { content: "\f12a"; }
+.radical-lantern:before { content: "\f12b"; }
+.radical-leaf:before { content: "\f12c"; }
+.radical-mohawk:before { content: "\f12d"; }
+.radical-morning:before { content: "\f12e"; }
+.radical-mustache:before { content: "\f12f"; }
+.radical-nailbat:before { content: "\f130"; }
+.radical-ox:before { content: "\f131"; }
+.radical-pi:before { content: "\f132"; }
+.radical-poem:before { content: "\f133"; }
+.radical-pool:before { content: "\f134"; }
+.radical-pope:before { content: "\f135"; }
+.radical-potato:before { content: "\f136"; }
+.radical-propaganda:before { content: "\f137"; }
+.radical-psychopath:before { content: "\f138"; }
+.radical-ribs:before { content: "\f139"; }
+.radical-rocket:before { content: "\f13a"; }
+.radical-roof:before { content: "\f13b"; }
+.radical-sauron:before { content: "\f13c"; }
+.radical-saw:before { content: "\f13d"; }
+.radical-shark:before { content: "\f13e"; }
+.radical-sick:before { content: "\f13f"; }
+.radical-signpost:before { content: "\f140"; }
+.radical-slice:before { content: "\f141"; }
+.radical-slinky:before { content: "\f142"; }
+.radical-sock:before { content: "\f143"; }
+.radical-spikes:before { content: "\f144"; }
+.radical-splinter:before { content: "\f145"; }
+.radical-squid:before { content: "\f146"; }
+.radical-stick:before { content: "\f147"; }
+.radical-superman:before { content: "\f148"; }
+.radical-tofu:before { content: "\f149"; }
+.radical-tombstone:before { content: "\f14a"; }
+.radical-train:before { content: "\f14b"; }
+.radical-triceratops:before { content: "\f14c"; }
+.radical-trident:before { content: "\f14d"; }
+.radical-tsunami:before { content: "\f14e"; }
+.radical-umbrella:before { content: "\f14f"; }
+.radical-viking:before { content: "\f150"; }
+.radical-water-slide:before { content: "\f151"; }
+.radical-womb:before { content: "\f152"; }
+.radical-worm:before { content: "\f153"; }
+.radical-zombie:before { content: "\f154"; }
+
+.quest {
+ background: #e9e9e9; 
+ color: #555;
+ line-height: 40px;
+}
+
+.quest.black{
+ background: #000; 
+ color: #fff;
+}
+
+input#typeans {
+ text-align: center;
+ height: 40px;
+ border: 0;
+ outline-style: none;
+ border-bottom: solid 1px #ccc;
+}
+
+.input{
+ margin: 5px 0;
+ font-family: monospace, "Hiragino Kaku Gothic Pro W3";
+ font-size: 18px;
+}
+
+input {font: inherit!important;} 
+
+div#incorrect{
+ background: #f03;
+ color: white;
+ line-height: 40px;
+}
+
+div#correct{
+ background: #88cc00;
+ color: white;
+ line-height: 40px;
+}

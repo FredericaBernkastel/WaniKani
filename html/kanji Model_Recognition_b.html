@@ -1,0 +1,103 @@
+{{FrontSide}}
+<br>
+
+<p class="mean text">
+  <b>Meaning:</b> <font color="#e20096">{{Kanji_Meaning}}</font>
+</p>
+<p class="read text">
+  <b>On'yomi:</b>
+  <span class="hiragana"><font color="#e20096">{{Reading_On}}</font></span>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Kun'yomi:</b>
+  <span class="hiragana"><font color="#e20096">{{Reading_Kun}}</font></span>
+</p>
+
+<br>
+<p class="radical text">
+ <b>Radicals:</b>
+ <font color="#0a9ce6">
+   <span class="hiragana"><b>{{Radicals}}</b></span>
+   <span class="radical_icons">{{^Radicals_Icons}}, {{Radicals_Icons}}{{/Radicals_Icons}}</span>
+ </font>
+ <span class="text">({{Radicals_Names}}{{#Radicals_Icons_Names}}, {{Radicals_Icons_Names}}{{/Radicals_Icons_Names}})</span>
+</p>
+<br><hr><br>
+
+<div class="text mean">
+  <u><b>Meaning Mnemonic</b></u>
+  <br><br>
+  {{Meaning_Mnemonic}}
+  <br><br><i>{{Meaning_Info}}</i>
+</div>
+<br>
+<div class="text read">
+  <u><b>Reading Mnemonic</b></u>
+  <br><br>
+  {{Reading_Mnemonic}}
+  <br><br>
+  <i>{{Reading_Info}}</i>
+</div>
+
+<!--    the code below is javascript to modify the type answer box, dont change anything below unless you know javascript  --!>
+
+
+<div id="correctAnswer" style="display:none">{{Kanji_Meaning}}</div>
+
+
+<script>
+//some addons read the script too early:
+if (document.getElementById('typeans')){
+
+var typedAnswer;
+var correctAnswer = document.getElementById('correctAnswer').innerText;
+
+
+var typedAnswer_element = document.getElementById('typeans');
+if (typedAnswer_element.querySelector('.typegiven')){
+
+// the "typegiven" class exists only on iphone:
+typedAnswer = typedAnswer_element.querySelector('.typegiven').querySelector('.typeBad').innerText;
+
+} else if (typedAnswer_element.querySelector('.typeBad')){
+
+//for pc and android:
+typedAnswer = typedAnswer_element.querySelector('.typeBad').innerText;
+
+} else {
+
+//if failed to detect answer
+typedAnswer = "";
+
+}
+
+//the part of code below is ugly and could be improved
+
+var means = correctAnswer.split(",");
+var mean = typedAnswer.split(",");
+var found = true;
+for (var i = 0; i < means.length; i++) {
+     means[i] = means[i].trim().toUpperCase();
+ }
+for (var i = 0; i < mean.length; i++) {
+     mean[i] = mean[i].trim().toUpperCase();
+     if (means.indexOf(mean[i]) === -1) {
+       found = false;
+     };
+
+ }
+
+
+//Modify answer output
+ if (typedAnswer === "") {
+ document.getElementById('typeans').style.display = "none";
+} else if (found) {
+ var c = "<div id='correct' class='input'>"+typedAnswer+"</div>";
+ var d = document.getElementById('typeans');
+ d.innerHTML =  c;
+} else {
+ var e = "<div id='incorrect' class='input'>"+typedAnswer+"</div>";
+ var f = document.getElementById('typeans');
+ f.innerHTML =  e;
+};
+};
+</script>

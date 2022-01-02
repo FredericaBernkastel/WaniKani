@@ -1,0 +1,60 @@
+{{FrontSide}}
+<br>
+<div class="mean text">
+  <b>Meaning:</b> <font color="#0a9ce6">{{Radical_Name}}</font>
+</div>
+<br>
+<div class="mean text">
+  <u><b>Meaning mnemonic</b></u>
+  <br><br> {{Radical_Meaning}}
+</div>
+
+<!--    the code below is javascript to modify the type answer box, dont change anything below unless you know javascript  --!>
+
+
+<div id="correctAnswer" style="display:none">{{Radical_Name}}</div>
+
+
+<script>
+//some addons read the script too early:
+if (document.getElementById('typeans')){
+
+var typedAnswer;
+var correctAnswer = document.getElementById('correctAnswer').innerText;
+
+
+var typedAnswer_element = document.getElementById('typeans');
+if (typedAnswer_element.querySelector('.typegiven')){
+
+// the "typegiven" class exists only on iphone:
+typedAnswer = typedAnswer_element.querySelector('.typegiven').querySelector('.typeBad').innerText;
+
+} else if (typedAnswer_element.querySelector('.typeBad')){
+
+//for pc and android:
+typedAnswer = typedAnswer_element.querySelector('.typeBad').innerText;
+
+} else {
+
+//if failed to detect answer
+typedAnswer = "";
+
+}
+ 
+
+
+//Modify answer output
+if (typedAnswer === "") {
+//if answer is empty or not found
+  document.getElementById('typeans').style.display = "none";
+} else if (typedAnswer.toUpperCase() === correctAnswer.toUpperCase()) {
+ var c = "<div id='correct' class='input'>"+typedAnswer+"</div>";
+ var d = document.getElementById('typeans');
+ d.innerHTML =  c;
+} else {
+ var e = "<div id='incorrect' class='input'>"+typedAnswer+"</div>";
+ var f = document.getElementById('typeans');
+ f.innerHTML =  e;
+};
+};
+</script>

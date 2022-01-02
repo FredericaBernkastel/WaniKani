@@ -1,0 +1,126 @@
+{{FrontSide}}
+<br>
+<div class="text mean"><b>Meaning:</b> {{Vocab_Meaning}}</div>
+
+<div class="text hiragana" style="font-size: 20px">
+  <b>{{Reading}}</b>
+</div>
+
+<br>
+{{#Speech_Type}}
+  <div class="text"><b>Type:</b> {{Speech_Type}}</div><br>
+{{/Speech_Type}}
+{{#Kanji}}
+  <div class="text">
+    <b>Kanji:</b> <span class="hiragana"><font color="#e20096">{{Kanji}}</font></span> ({{Kanji_Name}})
+  </div>
+  <br><hr><br>
+{{/Kanji}}
+
+{{#Meaning_Exp}}
+  <div class="text mean">
+    <b><u>Meaning Explanation</u></b>
+    <br><br> {{Meaning_Exp}}
+  </div>
+  <br>
+{{/Meaning_Exp}}
+
+{{#Reading_Exp}}
+  <div class="text read">
+    <u><b>Reading Mnemonic</b></u>
+    <br><br>{{Reading_Exp}}
+  </div>
+  <br>
+{{/Reading_Exp}}
+
+{{#Context_jp}}
+  <div class="text context">
+    <u><b>Context Example</b></u>
+      <br><br>
+    {{Context_jp}} ({{Context_en}})
+  </div>
+{{/Context_jp}}
+
+{{#Context_jp_2}}
+  <div class="text context">
+    {{Context_jp_2}} ({{Context_en_2}})
+  </div>
+{{/Context_jp_2}}
+
+{{#Context_jp_3}}
+  <div class="text context">
+    {{Context_jp_3}} ({{Context_en_3}})
+  </div>
+{{/Context_jp_3}}
+<br>
+
+{{Audio_b}}
+
+
+
+<!--    the code below is javascript to modify the type answer box, dont change anything below unless you know javascript  --!>
+
+
+<div id="correctAnswer" style="display:none">{{Vocab_Meaning}}</div>
+
+
+<script>
+//some addons read the script too early:
+if (document.getElementById('typeans')){
+
+var typedAnswer;
+var correctAnswer = document.getElementById('correctAnswer').innerText;
+
+
+var typedAnswer_element = document.getElementById('typeans');
+if (typedAnswer_element.querySelector('.typegiven')){
+
+// the "typegiven" class exists only on iphone:
+typedAnswer = typedAnswer_element.querySelector('.typegiven').querySelector('.typeBad').innerText;
+
+} else if (typedAnswer_element.querySelector('.typeBad')){
+
+//for pc and android:
+typedAnswer = typedAnswer_element.querySelector('.typeBad').innerText;
+
+} else {
+
+//if failed to detect answer
+typedAnswer = "";
+
+}
+
+
+//this part of code below is ugly and could be improved
+
+var means = correctAnswer.split(",");
+var mean = typedAnswer.split(",");
+var found = true;
+for (var i = 0; i < means.length; i++) {
+     means[i] = means[i].trim().toUpperCase();
+ }
+for (var i = 0; i < mean.length; i++) {
+     mean[i] = mean[i].trim().toUpperCase();
+     if (means.indexOf(mean[i]) === -1) {
+       found = false;
+     };
+
+ }
+
+
+//Modify answer output
+
+ if (typedAnswer === "") {
+//if answer is empty on pc or answer not detected
+ document.getElementById('typeans').style.display = "none";
+} else if (found) {
+ var c = "<div id='correct' class='input'>"+typedAnswer+"</div>";
+ var d = document.getElementById('typeans');
+ d.innerHTML =  c;
+} else {
+ var e = "<div id='incorrect' class='input'>"+typedAnswer+"</div>";
+ var f = document.getElementById('typeans');
+ f.innerHTML =  e;
+};
+};
+</script>
