@@ -19,11 +19,15 @@ p { padding: 0; margin: 0; }
  color: white;
  background-color:#0a9ce6;
  line-height: 1.2;
+ min-height: 180px; 
+ display: flex; 
+ justify-content: center; 
+ align-items: center;
 }
 
 .kanji.red { background-color:#e20096; }
 .kanji.purple { background-color: #a900fd; }
-.kanji.vocab { font-size: 15vw; line-height: 180px; }
+.kanji.vocab { font-size: 15vw; }
 
 .text {
   font-size: 14px;
