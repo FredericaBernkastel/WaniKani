@@ -1,5 +1,3 @@
-[<img alt="Discord" src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&labelColor=000000&logo=discord&logoColor=ffffff" height="20">](https://discord.gg/53ZeZ5z)
-
 ### Preface
 WaniKani collection consists of 8881 notes and 12700 audio samples 
 (at least 2048 individual characters). Each character is supplied with english meaning,
