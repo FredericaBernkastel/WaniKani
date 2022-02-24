@@ -45,4 +45,21 @@ This collection then takes place in following order:
     letter `b` to `g`. Remember "b" as in boy for the male voice, and "g" as in girl for 
     the female voice.
   - Perform same steps for the `Recognition` note type as well.
-    
+
+#### Level system
+If you are having trouble with correct card ordering, Wanikani is split into **levels of complexity**. Starting from 1, and up to 60.  
+In order to switch to this learning mode, follow these steps:
+1. Open deck options, and set `New cards/day: 0`
+1. Open `Deck -> Custom Study`. In the new window:
+    - Choose `Study by card state or tag`
+    - Click `Choose tags`, but skip new window without selecting any.
+1. You will be moved to a new virtual deck called "Custom Study Session". Again, open options of this new deck.
+    - Name: `WaniKani Level Session`
+    - Search: `(is:new tag:level1) "deck:WaniKani Ultimate"`.
+    - Limit to: `20` or `40` cards
+    - Selected by: `Order due`
+    - Reschedule cards based on my answers on this deck: `yes`
+1. Click `Rebuild`
+
+You will be able to study new cards from `WaniKani Level Session`, and review them afterwards as usual, in `WaniKani Ultimate` deck.  
+Once you have finished first batch of cards, click `Rebuild` in the level session, which will fetch next one from the same level. Once you have done studying a level, increase the level tag in options.
