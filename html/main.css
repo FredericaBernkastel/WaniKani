@@ -35,12 +35,19 @@ p { padding: 0; margin: 0; }
   font-style: "italics";
 }
 .text.mean, .text.read { line-height: 1.4; }
+.resume .text.mean span, .resume .text.read span { color: #e20096; } 
+.nightMode .resume .text.mean span, .nightMode .resume .text.read span { color: #ff3dbe; } 
+.resume.vocab .text.mean span { color: #a900fd;  }
+.nightMode .resume.vocab .text.mean span { color: #cc66ff;  }
+
 .text.context { line-height: 1.6; }
   .text .hiragana { font-size: 16px; }
+    .text .hiragana img { max-width: 16px; max-height: 16px; }
 
 .mean { margin-bottom: 0.5em; }
 .small { font-size: 12px; line-height: 1; }
 hr { border: none; border-bottom: solid 1px #aaa; }
+.nightMode hr { border-bottom-color: #666; }
 
 .radicon {
  color:white;
@@ -54,10 +61,12 @@ hr { border: none; border-bottom: solid 1px #aaa; }
 .reading-highlight {
   background-color: #999;
 }
+.nightMode .reading-highlight {  background-color: #666; }
 
 .radical-highlight {
   background-color: #6cbde6;
 }
+.nightMode .radical-highlight { background-color: #29a4e3; } 
 
 .vocabulary-highlight {
   background-color: #a05ef7;
@@ -302,6 +311,7 @@ input#typeans {
  outline-style: none;
  border-bottom: solid 1px #ccc;
 }
+.nightMode input#typeans {  border-bottom-color: #666; }
 
 .input{
  margin: 5px 0;

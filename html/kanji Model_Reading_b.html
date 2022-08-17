@@ -1,23 +1,26 @@
 {{FrontSide}}
 <br>
 
+<div class="resume">
 <p class="mean text">
-  <b>Meaning:</b> <font color="#e20096">{{Kanji_Meaning}}</font>
+  <b>Meaning:</b> <span>{{Kanji_Meaning}}</span>
 </p>
 <p class="read text">
   <b>On'yomi:</b>
-  <span class="hiragana"><font color="#e20096">{{Reading_On}}</font></span>
+  <span class="hiragana">{{Reading_On}}</span>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <b>Kun'yomi:</b>
-  <span class="hiragana"><font color="#e20096">{{Reading_Kun}}</font></span>
+  <span class="hiragana">{{Reading_Kun}}</span>
 </p>
+</div>
 
 <br>
 <p class="radical text">
  <b>Radicals:</b>
  <font color="#0a9ce6">
    <span class="hiragana"><b>{{Radicals}}</b></span>
-   <span class="radical_icons">{{^Radicals_Icons}}, {{Radicals_Icons}}{{/Radicals_Icons}}</span>
+   {{#Radicals_Icons}}<b>, <span class="radical_icons" data-icon="{{Radicals_Icons}}"></b></span>
+   {{/Radicals_Icons}}
  </font>
  <span class="text">({{Radicals_Names}}{{#Radicals_Icons_Names}}, {{Radicals_Icons_Names}}{{/Radicals_Icons_Names}})</span>
 </p>
