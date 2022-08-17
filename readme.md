@@ -24,20 +24,22 @@ This collection then takes place in following order:
   Now you can type one or more readings. You can even type in them all to test your skills.
   
 ### Installation
-1. Download latest `.apkg` file from the 
-   [release](https://github.com/FredericaBernkastel/WaniKani/releases) section, 
-   and import it in the program as usual.
-1. Click `Browse -> Decks -> WaniKani Ultimate`, and make sure that the cards are sorted by
-   `Due` column in ascending order.
+Download latest `.apkg` file from the [release](https://github.com/FredericaBernkastel/WaniKani/releases) section, and import it in the program as usual.
 
-**Additional configuration**: 
+### Additional configuration
 - Open deck options, and decide learning settings. Following are preferred by the author,
   but you are free to experiment with them!
-  - Steps (in minutes): `1 10 60 60 120 120 360 360`
-  - Graduating interval: `1 day`
-  - Easy interval: `1 day`
-  - Starting ease: `150%`
-  - (in reviews tab) Easy bonus: `130%`
+  - "New Cards" tab
+    - Learning steps (in minutes): `1 10 60 60 120 120 360 360`
+    - Graduating interval (days): `1`
+    - Easy interval (days): `2`
+  - "Display Order" tab
+    - **New card gather order**: `Ascending position` **(requires Scheduler V3/Anki 2.1.49)**
+    - New card sort order: `Ascending position` or `Card template, then ascending position` (first study recognition, then all readings)
+  - "Advanced" tab
+    - Starting ease: `1.5`
+    - Easy bonus: `1.75`
+    
 - Decide preferred voice actor (the default is Kenichi, Tokyo accent, male). 
   In order to change it to female:
   - Click `Browse -> Note Types -> vocab Model -> Reading`, and then on `Cards...` button.
@@ -47,7 +49,7 @@ This collection then takes place in following order:
   - Perform same steps for the `Recognition` note type as well.
 
 #### Level system
-If you are having trouble with correct card ordering, Wanikani is split into **levels of complexity**. Starting from 1, and up to 60.  
+If you are still having trouble with correct card ordering, Wanikani is split into **levels of complexity**. Starting from 1, and up to 60.  
 In order to switch to this learning mode, follow these steps:
 1. Open deck options, and set `New cards/day: 0`
 1. Open `Deck -> Custom Study`. In the new window:
@@ -56,7 +58,7 @@ In order to switch to this learning mode, follow these steps:
 1. You will be moved to a new virtual deck called "Custom Study Session". Again, open options of this new deck.
     - Name: `WaniKani Level Session`
     - Search: `(is:new tag:level1) "deck:WaniKani Ultimate"`.
-    - Limit to: `20` or `40` cards
+    - Limit to: `40` cards
     - Selected by: `Order due`
     - Reschedule cards based on my answers on this deck: `yes`
 1. Click `Rebuild`
