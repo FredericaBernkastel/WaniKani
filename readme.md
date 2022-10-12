@@ -1,7 +1,10 @@
 ### Preface
-WaniKani collection consists of 8881 notes and 12700 audio samples 
-(at least 2048 individual characters). Each character is supplied with english meaning,
-multiple on'yomi and kun'yomi readings, radical decomposition, meaning and reading mnemonics
+WaniKani collection consists of:
+- **2048** kanji entries
+- **6352** japanese vocabulary entries
+- **12700** audio samples
+
+Each entry is supplied with english meaning, multiple on'yomi and kun'yomi readings, radical decomposition, meaning and reading mnemonics
 as well as context examples.  
 It has been originally ported from the site by 
 [@adeckforanki](https://www.reddit.com/user/adeckforanki/) alone.
@@ -30,15 +33,15 @@ Download latest `.apkg` file from the [release](https://github.com/FredericaBern
 - Open deck options, and decide learning settings. Following are preferred by the author,
   but you are free to experiment with them!
   - "New Cards" tab
-    - Learning steps (in minutes): `1 10 60 60 120 120 360 360`
+    - Learning steps (in minutes): `1 10 60 120 360`
     - Graduating interval (days): `1`
     - Easy interval (days): `2`
   - "Display Order" tab
-    - **New card gather order**: `Ascending position` **(requires Scheduler V3/Anki 2.1.49)**
+    - **New card gather order**: `Ascending position` **(requires Scheduler v3/Anki >=2.1.49)**
     - New card sort order: `Ascending position` or `Card template, then ascending position` (first study recognition, then all readings)
   - "Advanced" tab
-    - Starting ease: `1.5`
-    - Easy bonus: `1.75`
+    - Starting ease: `2.0`
+    - Easy bonus: `2.5`
     
 - Decide preferred voice actor (the default is Kenichi, Tokyo accent, male). 
   In order to change it to female:
