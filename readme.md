@@ -1,3 +1,5 @@
+[<img alt="crates.io" src="https://img.shields.io/discord/949898195377459240?color=5865f2&label=discord&logo=Discord&logoColor=fff&style=flat-square" height="20">](https://discord.gg/XC5wMPgW78)
+
 ### Preface
 WaniKani collection consists of:
 - **2048** kanji entries
