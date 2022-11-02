@@ -42,8 +42,8 @@ Download latest `.apkg` file from the [release](https://github.com/FredericaBern
     - **New card gather order**: `Ascending position` **(requires Scheduler v3/Anki >=2.1.49)**
     - New card sort order: `Ascending position` or `Card template, then ascending position` (first study recognition, then all readings)
   - "Advanced" tab
-    - Starting ease: `2.0`
-    - Easy bonus: `2.5`
+    - Starting ease: `2.5`
+    - Easy bonus: `2.0`
     
 - Decide preferred voice actor (the default is Kenichi, Tokyo accent, male). 
   In order to change it to female:
