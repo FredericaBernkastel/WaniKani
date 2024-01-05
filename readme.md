@@ -1,7 +1,12 @@
+[<img alt="crates.io" src="https://img.shields.io/discord/949898195377459240?color=5865f2&label=discord&logo=Discord&logoColor=fff&style=flat-square" height="20">](https://discord.gg/XC5wMPgW78)
+
 ### Preface
-WaniKani collection consists of 8881 notes and 12700 audio samples 
-(at least 2048 individual characters). Each character is supplied with english meaning,
-multiple on'yomi and kun'yomi readings, radical decomposition, meaning and reading mnemonics
+WaniKani collection consists of:
+- **2048** kanji entries
+- **6352** japanese vocabulary entries
+- **12700** audio samples
+
+Each entry is supplied with english meaning, multiple on'yomi and kun'yomi readings, radical decomposition, meaning and reading mnemonics
 as well as context examples.  
 It has been originally ported from the site by 
 [@adeckforanki](https://www.reddit.com/user/adeckforanki/) alone.
@@ -34,7 +39,7 @@ Download latest `.apkg` file from the [release](https://github.com/FredericaBern
     - Graduating interval (days): `1`
     - Easy interval (days): `2`
   - "Display Order" tab
-    - **New card gather order**: `Ascending position` **(requires Scheduler V3/Anki 2.1.49)**
+    - **New card gather order**: `Ascending position` **(requires Scheduler v3/Anki >=2.1.49)**
     - New card sort order: `Ascending position` or `Card template, then ascending position` (first study recognition, then all readings)
   - "Advanced" tab
     - Starting ease: `1.5`
