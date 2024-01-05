@@ -30,7 +30,7 @@ Download latest `.apkg` file from the [release](https://github.com/FredericaBern
 - Open deck options, and decide learning settings. Following are preferred by the author,
   but you are free to experiment with them!
   - "New Cards" tab
-    - Learning steps (in minutes): `1 10 60 60 120 120 360 360`
+    - Learning steps (in minutes): `1m 10m`
     - Graduating interval (days): `1`
     - Easy interval (days): `2`
   - "Display Order" tab
@@ -38,7 +38,7 @@ Download latest `.apkg` file from the [release](https://github.com/FredericaBern
     - New card sort order: `Ascending position` or `Card template, then ascending position` (first study recognition, then all readings)
   - "Advanced" tab
     - Starting ease: `1.5`
-    - Easy bonus: `1.75`
+    - Easy bonus: `2.0`
     
 - Decide preferred voice actor (the default is Kenichi, Tokyo accent, male). 
   In order to change it to female:
@@ -47,6 +47,8 @@ Download latest `.apkg` file from the [release](https://github.com/FredericaBern
     letter `b` to `g`. Remember "b" as in boy for the male voice, and "g" as in girl for 
     the female voice.
   - Perform same steps for the `Recognition` note type as well.
+
+- (Optional) Click `Browse -> Decks -> Wanikani Ultimate -> Fields...`. In opened window, select `sort_id` field, then enable `Sort by this field`.
 
 #### Level system
 If you are still having trouble with correct card ordering, Wanikani is split into **levels of complexity**. Starting from 1, and up to 60.  
