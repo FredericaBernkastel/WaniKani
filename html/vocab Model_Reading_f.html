@@ -5,3 +5,11 @@
 </div>
 
 <div class="input">{{type:sort_id}}</div>
+
+<script src="https://unpkg.com/wanakana"></script>
+<script>
+var typeans = document.getElementById('typeans');
+if (typeans) {
+  wanakana.bind(typeans, { IMEMode: true });
+}
+</script>
